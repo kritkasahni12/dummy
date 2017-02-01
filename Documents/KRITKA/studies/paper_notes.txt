@@ -1,0 +1,26 @@
+CN103345752 A
+a)why accelerometer?
+proper acceleration; ex when we are sitting :- 1g
+when placed on centre of mass, measures net external force acting on subject.
+So while walking ; when we raise foot      ->push backward so static friction infwd dirn so peaks in neg z axis
+		   when we put foot on grnd->push fwd so static  friction in back dirn so peaks in pos z axis
+so we see troughs and peaks in graph.
+plus , easily avail in phones these days
+
+So to count steps :
+1)when still 
+-> stand still for 5 secs
+
+2)then we knw when started moving 
+-> diff btw mean std and std of each window in still state;this diff never exceeds 0.07 so started moving ->
+ diff exceeds th 0.08 so we know when started moving
+
+3)when step happens?
+at every sample k, calculate th and also calc max-acc(k) which if exceeds th -> incr step_count
+-> how calc th?
+this was done expirementally
+"diff" (diff in magnitudes of pos and neg peaks mentioned in 
+a) is plotted against freq of steps-> draw a line through 2 pts which are 2 minimum diff values
+so th = a/(i-k) + b => y=mx+c so a and b were calculated and b=3.1541 close to pie
+
+4)time between successive steps->inevrs of this time is frequency
